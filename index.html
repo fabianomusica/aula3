@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Aula - Página Inicial</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #004a8d;
+            color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            width: 90%;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #004a8d;
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            background-color: #f9fbfd;
+            border: 1px solid #dce4ec;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #f7941d;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #d97e12;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer address {
+            font-style: normal;
+            margin-top: 5px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portal de Desenvolvimento Web</h1>
+        <p>Unidade Tecnológica — Rua das Acácias, 1450, Centro - Joinville/SC</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bem-vindo à Aula de HTML e Git</h2>
+            <p>
+                Esta é uma página modelo estruturada com HTML5 semântico e estilizada com CSS interno. 
+                Ela serve como ponto de partida ideal para testar o versionamento de arquivos no VS Code e enviar alterações para o GitHub.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conteúdos Praticados Hoje</h2>
+            <ul>
+                <li>Estrutura básica de um documento HTML5 (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;footer&gt;</code>).</li>
+                <li>Criação de listas não ordenadas e parágrafos informativos.</li>
+                <li>Formulários interativos com botões de seleção única (radio buttons).</li>
+                <li>Controle de versão utilizando <code>git init</code>, <code>git add</code>, <code>git commit</code> e <code>git push</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pesquisa Rápida da Turma</h2>
+            <form class="form-group" onsubmit="event.preventDefault(); alert('Resposta registrada com sucesso!');">
+                <p><strong>Qual área você mais gosta no desenvolvimento web?</strong></p>
+                
+                <label class="radio-option">
+                    <input type="radio" name="area_dev" value="frontend" checked>
+                    Front-end (HTML, CSS e interfaces visuais)
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="area_dev" value="backend">
+                    Back-end (Lógica de servidor e bancos de dados)
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="area_dev" value="fullstack">
+                    Full Stack (Um pouco de cada área)
+                </label>
+
+                <button type="submit">Enviar Preferência</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto de Aula - Todos os direitos reservados.</p>
+        <address>
+            Endereço Fictício: Av. Tecnologia da Informação, nº 500 - Bairro Inovação, Joinville - SC | CEP: 89200-000
+        </address>
+    </footer>
+
+</body>
+</html>
